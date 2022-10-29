@@ -1,7 +1,6 @@
-#include <iostream>
-using namespace std;
-int main()
+#include "func.h"
+int main() 
 {
-    cout<<"Hello World!"<<endl;
-    return 0;
+	print();
+	return 0;
 }
