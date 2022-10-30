@@ -1,3 +1,4 @@
-cmake_minimum_required(VERSION 3.1...3.24)
-project(HelloWorld VERSION 1.0 LANGUAGES CXX)
-add_executable(hi func.cpp hello_world.cpp)
+cmake_minimum_required(VERSION 3.16)
+project(compiler02)
+set(CMAKE_CXX_STANDARD 14)
+add_executable(compiler02.out hello_world.cpp func.cpp func.h)
