@@ -5,6 +5,6 @@
 
 |              |    Быстрая    |             Выбором                |
 | ------------ | ------------- | ---------------------------------- |
-| Лушчий случай| $O(n^2)$      | $O(n^2)$ comparisons, $O(n)$ swaps |
-| Худший случай| $O(n\log{n})$ | $O(n^2)$ comparisons, $O(1)$ swap  |
+| Худший случай| $O(n^2)$      | $O(n^2)$ comparisons, $O(n)$ swaps |
+| Лучший случай| $O(n\log{n})$ | $O(n^2)$ comparisons, $O(1)$ swap  |
 | В среднем    | $O(n\log{n})$ | $O(n^2)$ comparisons, $O(n)$ swaps |
