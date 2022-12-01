@@ -1,30 +1,30 @@
-#include <iostream> 
-#include <iostream>
-#include <string.h>
-using namespace std;
- bool palindrom(char s[]);
-int main() 
-{   
-    char txt[100];
-    cout << "введите строку" << endl; 
-    cin.getline(txt, 100);
-    if(palindrom(txt))
-       cout << "палиндром " << endl;
-   else
-       cout << "не палиндром " << endl;
-    return 0;
-}
- bool palindrom(char s[])
+#include<cassert>
+unsigned int length(const char* str)
 {
-   int n = strlen(s); 
-   bool k =true;
-   for (int i = 0;  i < n / 2; i++ )
-  {
-      if(s[i]!=s[n-1-i])
-      {
-           k=false;
-           break;
-      }
-  }
-  return k;
+    if (str == nullptr)
+    return 0;
+    const char* c = str;
+    while(*c != '\0')
+        ++c;
+    return c - str;
+}
+bool check(const char* s)
+{
+	int start = 0;
+	int end = length(s) - 1;
+	for(int i = 0, start = end; i <= start; i++, start--)
+	{
+		if(s[i] != s[start])
+			return false;
+	}
+	return true;
+}
+int main()
+{ 
+	assert(check("a") == true);
+	assert(check("123321") == true);
+	assert(check("ab") == false);
+	assert(check(nullptr) == true);
+	assert(check(" ") == true);
+	return  0;
 }
